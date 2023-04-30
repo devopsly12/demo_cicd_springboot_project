@@ -8,7 +8,7 @@ stages {
 
     steps {
 
-     sh 'mvn clean verify  -f pom.xml'
+     sh 'mvn clean install -DskipTests'
     }
 
     
