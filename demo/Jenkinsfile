@@ -1,11 +1,10 @@
 pipeline {
 
-agent{
-    any
-     }
+agent any
+     
 
-stages{
-    stage ('Build the code'){
+stages {
+    stage('Build the code') {
 
     steps{
 
@@ -13,9 +12,8 @@ stages{
     }
 
     }
-    post{
-        success 
-        {
+    post {
+        success {
 
             echo 'Now Archiving...'
             archiveArtifacts artifacts: '**/target/*.war'
