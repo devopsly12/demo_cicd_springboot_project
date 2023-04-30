@@ -28,6 +28,12 @@ stages{
             steps {
                 sh 'mvn verify -DskipUnitTests'
             }
+            post{
+                success{
+
+                    echo 'test'
+                }
+            }
         }
 
 
