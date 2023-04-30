@@ -6,18 +6,20 @@ agent any
 stages {
     stage('Build the code') {
 
-    steps{
+    steps {
 
      sh 'mvn clean verify  -f pom.xml'
     }
 
-    }
+    
     post {
         success {
 
             echo 'Now Archiving....'
             archiveArtifacts artifacts: '**/target/*.war'
         }
+    }
+
     }
     stage('UNIT TEST'){
             steps {
