@@ -13,10 +13,5 @@ steps:
   inputs:
     mavenPomFile: 'demo/pom.xml'
     goals: 'verify'
-    publishJUnitResults: false
-    javaHomeOption: 'JDKVersion'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
     sonarQubeRunAnalysis: true
     sqMavenPluginVersionChoice: 'latest'
