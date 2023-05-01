@@ -11,7 +11,7 @@ pool: Default
 steps:
 - task: Maven@4
   inputs:
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: 'demo/pom.xml'
     goals: 'verify'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
